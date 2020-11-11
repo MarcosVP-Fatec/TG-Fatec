@@ -4,12 +4,13 @@
 ## Aluno: * MARCOS VINICIO PEREIRA * 
 ## Fatec SJC – 2020/2 - Professor: Giuliano Araujo Bertoti 
 
-# Faculdade de Tecnologia de São José dos Campos Professor Jassen Vidal
+# Faculdade de Tecnologia de São José dos Campos 
+# Professor Jassen Vidal
 
 
 # O PROBLEMA
 
-	“Manter a estrutura de dados atualizada em cada base de cliente e fazer as manutenções de forma rápida e eficiente antes de aplicar atualizações de seu sistema”.**
+	“Manter a estrutura de dados atualizada em cada base de cliente e fazer as manutenções de forma rápida e eficiente antes de aplicar atualizações de seu sistema”.
 
 	Nos dias atuais todo desenvolvimento de sistema, seja lá quais forem as linguagens utilizadas ,encontram um ponto em comum: O Modelo de Dados em Bancos de Dados Relacionais e sua implementação.
 
