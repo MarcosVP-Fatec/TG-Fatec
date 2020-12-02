@@ -7,6 +7,8 @@
 # Faculdade de Tecnologia de São José dos Campos 
 # Professor Jassen Vidal
 
+Ler no PDF (https://github.com/MarcosVP-Fatec/TG-Fatec/blob/master/TG_MVP.pdf)
+
 
 # O PROBLEMA
 
