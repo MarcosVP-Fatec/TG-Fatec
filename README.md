@@ -6,7 +6,7 @@
 ## Professor Orientador: Carlos Augusto Lombardi Garcia
 
 
-Ler no PDF (https://github.com/MarcosVP-Fatec/TG-Fatec/blob/master/TG_MarcosVinicioPereira_FatecSJC.pdf)
+Ler no PDF (https://github.com/MarcosVP-Fatec/TG-Fatec/blob/master/docs/TG_MarcosVinicioPereira_FatecSJC.pdf)
 
 
 # O PROBLEMA
