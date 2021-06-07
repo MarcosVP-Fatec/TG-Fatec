@@ -1,5 +1,35 @@
--- cria schema e usuário
+-- cria dados iniciais
+
+-- ------------------------------------------------------------------------
+-- USUÁRIO
+-- ------------------------------------------------------------------------
+insert into sec_usuario (nome, email, validhash) values ('MVP','marcos.pereira47@fatec.sp.gov.br','?');
+commit;
+update sec_usuario set _inc_usua = 1 
+                     , _alt_usua = 1
+                     , _inc_data = '2021-04-01'
+                     , _alt_data = '2021-04-01'
+        where nome = 'MVP';
+
+-- ------------------------------------------------------------------------
+-- AUTORIZAÇÕES BÁSICAS
+-- ------------------------------------------------------------------------
+insert into sec_autorizacao (chave, descr, _inc_usua, _inc_data, _alt_usua, _alt_data) values ('ROLE_OWNER'    ,'Proprietário do sistema' ,1,'2021-04-01',1,'2021-04-01');
+insert into sec_autorizacao (chave, descr, _inc_usua, _inc_data, _alt_usua, _alt_data) values ('ROLE_ADMIN'    ,'Administrador do sistema',1,'2021-04-01',1,'2021-04-01');
+insert into sec_autorizacao (chave, descr, _inc_usua, _inc_data, _alt_usua, _alt_data) values ('ROLE_MODELADOR','Modelador de tabelas'    ,1,'2021-04-01',1,'2021-04-01');
+insert into sec_autorizacao (chave, descr, _inc_usua, _inc_data, _alt_usua, _alt_data) values ('ROLE_CONSULTAR','Consultar sem alterações',1,'2021-04-01',1,'2021-04-01');
+
+-- ------------------------------------------------------------------------
+-- AUTORIZAÇÕES DO USUÁRIO OWNER
+-- ------------------------------------------------------------------------
+insert into sec_aut_usuario (idaut, idusu, _inc_usua, _inc_data, _alt_usua, _alt_data) 
+       values (1,1,1,'2021-04-01',1,'2021-04-01');
+insert into sec_aut_usuario (idaut, idusu, _inc_usua, _inc_data, _alt_usua, _alt_data) 
+       values (2,1,1,'2021-04-01',1,'2021-04-01');
+
 /*
+
+
 -- ------------------------------------------------------------------------
 -- MES_ANO
 -- ------------------------------------------------------------------------

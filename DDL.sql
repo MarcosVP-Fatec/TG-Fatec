@@ -7,19 +7,54 @@ create user if not exists 'gedamsys'@'localhost' identified by 'g3daM';
 grant select, insert, delete, update on gedam.* to gedamsys@'localhost';
 
 -- ------------------------------------------------------------------------
+-- USUARIO
+-- ------------------------------------------------------------------------
+create table sec_usuario (
+      id            bigint auto_increment
+    , nome          varchar(30)
+    , email         varchar(500)
+    , validhash     varchar(100)
+    , _inc_usua     bigint
+    , _inc_data     datetime            
+    , _alt_usua     bigint          
+    , _alt_data     datetime            
+    , constraint sec_usuario_pk primary key (id)
+);
+
+-- ------------------------------------------------------------------------
 -- AUTORIZAÇÕES
 -- ------------------------------------------------------------------------
-create table sec_autorizacoes (
-      id                    varchar(30)
-    , descr                 varchar(100)
-    , _inc_usua             bigint
-    , _inc_data             datetime            
-    , _alt_usua             bigint          
-    , _alt_data             datetime            
-    , _seq                  bigint unsigned unique auto_increment
+create table sec_autorizacao (
+      id            bigint auto_increment
+    , chave         varchar(30)
+    , descr         varchar(100)
+    , _inc_usua     bigint
+    , _inc_data     datetime            
+    , _alt_usua     bigint          
+    , _alt_data     datetime            
+    , constraint sec_autorizacao_pk primary key (id)
+);
+
+-- ------------------------------------------------------------------------
+-- AUTORIZAÇÕES DOS USUÁRIOS
+-- ------------------------------------------------------------------------
+create table sec_aut_usuario (
+      id            bigint auto_increment
+    , idaut         bigint
+    , idusu         bigint
+    , _inc_usua     bigint
+    , _inc_data     datetime            
+    , _alt_usua     bigint          
+    , _alt_data     datetime            
+    , constraint sec_aut_usuario_pk primary key (id)
+    , constraint sec_aut_usuario_idaut_fk foreign key (idaut)
+                 references sec_autorizacao (id)
+    , constraint sec_aut_usuario_idusu_fk foreign key (idusu)
+                 references sec_usuario (id)
 );
 
 /*
+
 -- ------------------------------------------------------------------------
 -- MES_ANO
 -- ------------------------------------------------------------------------
