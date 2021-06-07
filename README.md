@@ -1,13 +1,12 @@
 # TG-Fatec
+# GERÊNCIA DINÂMICA E AUTOMÁTICA DO MODELO DE DADOS (Gedam)
+## Aluno: **MARCOS VINICIO PEREIRA** 
+## Fatec SJC – 2021/1 - Professor: Giuliano Araujo Bertoti 
 
-## Metodologia de Pesquisa Científica Tecnológica 
-## Aluno: * MARCOS VINICIO PEREIRA * 
-## Fatec SJC – 2020/2 - Professor: Giuliano Araujo Bertoti 
+## Faculdade de Tecnologia de São José dos Campos 
+## Professor Jassen Vidal
 
-# Faculdade de Tecnologia de São José dos Campos 
-# Professor Jassen Vidal
-
-Ler no PDF (https://github.com/MarcosVP-Fatec/TG-Fatec/blob/master/TG_MVP.pdf)
+Ler no PDF (https://github.com/MarcosVP-Fatec/TG-Fatec/blob/master/TG_MarcosVinicioPereira_FatecSJC.pdf)
 
 
 # O PROBLEMA
