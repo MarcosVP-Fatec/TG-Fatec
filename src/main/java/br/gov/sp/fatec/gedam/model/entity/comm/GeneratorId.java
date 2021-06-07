@@ -5,13 +5,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
 
-import lombok.Setter;
-
-import lombok.Getter;
-
 @MappedSuperclass
-@Getter
-@Setter
 public class GeneratorId extends GeneratorAudit {
 
     @Id
@@ -20,5 +14,9 @@ public class GeneratorId extends GeneratorAudit {
 
     //CONSTRUTOR
     public GeneratorId(){ super(); }
+
+    //GETTERS / SETTERS
+    public Long getId()         {return this.id;}
+    public void setId(Long id)  {this.id = id;  }
 
 }
