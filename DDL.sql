@@ -53,45 +53,21 @@ create table sec_aut_usuario (
                  references sec_usuario (id)
 );
 
+-- ------------------------------------------------------------------------
+-- MESES
+-- ------------------------------------------------------------------------
+create table est_mes (
+      id            varchar(2)
+    , descr         varchar(9)
+    , _inc_usua     bigint
+    , _inc_data     datetime            
+    , _alt_usua     bigint          
+    , _alt_data     datetime            
+    , constraint est_mes_pk primary key (id)
+    , constraint est_mes_descr_uk unique (descr)
+);
+
 /*
-
--- ------------------------------------------------------------------------
--- MES_ANO
--- ------------------------------------------------------------------------
-create table mes_ano (
-      mes_id                bigint unsigned primary key auto_increment
-    , mes_numero            varchar(2) not null
-    , mes_descr             varchar(9) not null
-    , _inc_usua             bigint          
-    , _inc_data             datetime            
-    , _alt_usua             bigint          
-    , _alt_data             datetime            
-    , constraint mes_numero_uk unique (mes_numero)
-    , constraint mes_descr_uk unique (mes_descr)
-);
-
--- ------------------------------------------------------------------------
--- NÍVEL DE USUARIO
--- 1-Administrador
--- 2-Proprietário
--- 3-Parceiro
--- 4-Cliente
--- ------------------------------------------------------------------------
-create table niv_usuario(
-      niv_id                bigint unsigned primary key
-    , niv_key               varchar(20)     not null
-    , niv_descr             varchar(20)     not null
-    , niv_adm               boolean         not null
-    , niv_prop              boolean         not null
-    , niv_parc              boolean         not null
-    , niv_cli               boolean         not null
-    , _inc_usua             bigint          
-    , _inc_data             datetime            
-    , _alt_usua             bigint          
-    , _alt_data             datetime            
-    , constraint niv_key_uk   unique (niv_key)
-    , constraint niv_descr_uk unique (niv_descr)
-);
 
 -- ------------------------------------------------------------------------
 -- USUARIO
