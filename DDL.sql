@@ -1,11 +1,25 @@
 -- ------------------------------------------------------------------------
 -- cria schema e usuário
 -- ------------------------------------------------------------------------
-create schema if not exists saloon;
-use saloon;
-create user if not exists 'saloonsys'@'localhost' identified by 'M@triz';
-grant select, insert, delete, update on saloon.* to saloonsys@'localhost';
+create schema if not exists gedam;
+use gedam;
+create user if not exists 'gedamsys'@'localhost' identified by 'g3daM';
+grant select, insert, delete, update on gedam.* to gedamsys@'localhost';
 
+-- ------------------------------------------------------------------------
+-- AUTORIZAÇÕES
+-- ------------------------------------------------------------------------
+create table sec_autorizacoes (
+      id                    varchar(30)
+    , descr                 varchar(100)
+    , _inc_usua             bigint
+    , _inc_data             datetime            
+    , _alt_usua             bigint          
+    , _alt_data             datetime            
+    , _seq                  bigint unsigned unique auto_increment
+);
+
+/*
 -- ------------------------------------------------------------------------
 -- MES_ANO
 -- ------------------------------------------------------------------------
@@ -214,3 +228,4 @@ create table par_parametro (
     , _alt_data             datetime            
     , constraint par_cod_uk unique (par_cod) 
 );
+*/

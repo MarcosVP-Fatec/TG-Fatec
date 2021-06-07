@@ -1,5 +1,5 @@
 -- cria schema e usuário
-
+/*
 -- ------------------------------------------------------------------------
 -- MES_ANO
 -- ------------------------------------------------------------------------
@@ -79,4 +79,4 @@ insert into ctm_contrato_motivo (ctm_descr) values ("Casamento"             );
 insert into ctm_contrato_motivo (ctm_descr) values ("Confraternização"      );
 insert into ctm_contrato_motivo (ctm_descr) values ("Encontro de Amigos(as)");
 insert into ctm_contrato_motivo (ctm_descr) values ("Outros"                );
-
+*/
