@@ -105,7 +105,7 @@ create table mer_modulo (
       id            bigint auto_increment
     , nome          varchar(30)  not null
     , prefixo       varchar(3)   not null
-    , prefixochk    varchar(1)   not null
+    , prefixonochk  varchar(1)   not null
     , constraint mer_modulo_pk primary key (id)
     , constraint mer_modulo_nome_uk unique (nome)
 --  Padrão auditoria     

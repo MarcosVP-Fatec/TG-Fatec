@@ -21,15 +21,19 @@ public class ModuloTests {
     @Autowired
     private ModuloRepository    moduloRepo;
 
-    final static String NOME_1  =   "#NOME_MODULO_1";
-    final static String NOME_2  =   "#NOME_MODULO_2";
+    final static String NOME_1      =   "#NOME_MODULO_1";
+    final static String NOME_2      =   "#NOME_MODULO_2";
+    final static String PREFIXO_1   =   "#?1";
+    final static String PREFIXO_2   =   "#?2";
 
     @BeforeEach
     void iniciar(@Autowired JdbcTemplate jdbc){
 
         jdbc.update(
-            "insert into mer_modulo (nome) values (?)"
+            "insert into mer_modulo (nome, prefixo ,prefixonochk) values (?,?,?)"
             , NOME_1
+            , PREFIXO_1
+            , "S"
         );
 
     }
@@ -62,6 +66,8 @@ public class ModuloTests {
         assertFalse(moduloRepo.existsByNome(NOME_2));
         Modulo modulo = new Modulo();
         modulo.setNome(NOME_2);
+        modulo.setPrefixo(PREFIXO_2);
+        modulo.setPrefixoNoChk("N");
         moduloRepo.saveAndFlush(modulo);
         assertTrue(moduloRepo.existsByNome(NOME_2));
 
