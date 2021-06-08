@@ -24,9 +24,9 @@ import br.gov.sp.fatec.gedam.tool.Validador;
 @AttributeOverride(name = "id", column = @Column(name = "id"))
 public class Usuario extends GeneratorId{
 
-    @Column(name="nome"     ,length = 30 , unique = true )  private String nome;
-    @Column(name="email"    ,length = 500, unique = false)  private String email;
-    @Column(name="validhash",length = 100, unique = false)  private String validHash;
+    @Column(name="nome"     ,length = 30 , unique = true , nullable = false)  private String nome;
+    @Column(name="email"    ,length = 500, unique = false, nullable = false)  private String email;
+    @Column(name="validhash",length = 100, unique = false, nullable = false)  private String validHash;
 
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(name = "sec_aut_usuario",

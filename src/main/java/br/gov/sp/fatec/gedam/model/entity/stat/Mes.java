@@ -10,7 +10,7 @@ import br.gov.sp.fatec.gedam.model.entity.comm.GeneratorAudit;
 
 /**
  * @author Marcos Vinicio Pereira
- * @category Entidades
+ * @category Entidades - Estáticas
  * @version 1.0
  */
 
@@ -20,10 +20,10 @@ import br.gov.sp.fatec.gedam.model.entity.comm.GeneratorAudit;
 public class Mes extends GeneratorAudit {
 
     @Id
-    @Column(name = "id"   , length = 2, updatable = false)
+    @Column(name = "id"   , length = 2, unique = false, nullable = false, updatable = false)
     private String id;
 
-    @Column(name = "descr", length = 9, updatable = true)
+    @Column(name = "descr", length = 9, unique = true , nullable = false, updatable = true )
     private String descr;
 
     //GETTERS / SETTERS

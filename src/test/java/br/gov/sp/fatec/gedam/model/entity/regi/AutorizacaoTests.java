@@ -12,7 +12,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.test.annotation.Rollback;
 import org.springframework.transaction.annotation.Transactional;
 
-import br.gov.sp.fatec.gedam.service.AutorizacaoRepository;
+import br.gov.sp.fatec.gedam.service.regi.AutorizacaoRepository;
 
 @SpringBootTest
 @Transactional

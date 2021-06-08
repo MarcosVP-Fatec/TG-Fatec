@@ -15,8 +15,8 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.test.annotation.Rollback;
 import org.springframework.transaction.annotation.Transactional;
 
-import br.gov.sp.fatec.gedam.service.AutorizacaoRepository;
-import br.gov.sp.fatec.gedam.service.UsuarioRepository;
+import br.gov.sp.fatec.gedam.service.regi.AutorizacaoRepository;
+import br.gov.sp.fatec.gedam.service.regi.UsuarioRepository;
 
 @SpringBootTest
 @Transactional
@@ -76,6 +76,7 @@ public class UsuarioTests {
         Usuario usuario = new Usuario();
         usuario.setNome(NOME_2);
         usuario.setEmail(EMAIL_2);
+        usuario.setValidHash("##");
         usuario.setAutorizacoes(buscaAutorizacoes());
         usuRepo.saveAndFlush(usuario);
 

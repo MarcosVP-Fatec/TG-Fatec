@@ -25,8 +25,8 @@ import br.gov.sp.fatec.gedam.model.entity.comm.GeneratorId;
 @AttributeOverride(name = "id", column = @Column(name = "id"))
 public class Autorizacao extends GeneratorId{
 
-    @Column(name="chave"    ,length = 30 , unique = true )  private String chave;
-    @Column(name="descr"    ,length = 100, unique = false)  private String descr;
+    @Column(name="chave"    ,length = 30 , unique = true , nullable = false)  private String chave;
+    @Column(name="descr"    ,length = 100, unique = false, nullable = false)  private String descr;
     
     @JsonView( View.AutorizacaoResumo.class )
     @ManyToMany(fetch = FetchType.LAZY, mappedBy = "autorizacoes")

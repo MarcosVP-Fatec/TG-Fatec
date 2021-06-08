@@ -1,4 +1,4 @@
-package br.gov.sp.fatec.gedam.service;
+package br.gov.sp.fatec.gedam.service.stat;
 
 import java.util.List;
 import java.util.Optional;

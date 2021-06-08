@@ -14,7 +14,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.test.annotation.Rollback;
 import org.springframework.transaction.annotation.Transactional;
 
-import br.gov.sp.fatec.gedam.service.MesRepository;
+import br.gov.sp.fatec.gedam.service.stat.MesRepository;
 
 @SpringBootTest
 @Transactional

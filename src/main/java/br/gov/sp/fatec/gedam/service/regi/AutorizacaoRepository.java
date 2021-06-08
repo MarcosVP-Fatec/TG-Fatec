@@ -1,6 +1,5 @@
-package br.gov.sp.fatec.gedam.service;
+package br.gov.sp.fatec.gedam.service.regi;
 
-import java.util.List;
 import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
