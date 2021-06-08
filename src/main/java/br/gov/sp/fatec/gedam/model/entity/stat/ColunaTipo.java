@@ -18,7 +18,7 @@ public class ColunaTipo extends GeneratorAudit{
 
     @Id
     @Column(name = "id"       , length = 1,  unique = true , nullable = false, updatable = false )
-    private char id;
+    private String id;
 
     @Column(name = "descr"    , length = 20, unique = true, nullable = false, updatable = true )
     private String descr;
@@ -29,8 +29,8 @@ public class ColunaTipo extends GeneratorAudit{
     @Column(name = "isdecimal", updatable = true )
     private boolean isDecimal;
 
-    public char getId()                 {return id;         }
-    public void setId(char id)          {this.id = id;      }
+    public String getId()               {return id;         }
+    public void setId(String id)        {this.id = id;      }
     public String getDescr()            {return descr;      }
     public void setDescr(String descr)  {this.descr = descr;}
     public boolean isTamanho()          {return isTamanho;  }
@@ -42,7 +42,7 @@ public class ColunaTipo extends GeneratorAudit{
         this.isTamanho = isTamanho;
     }
     public void setDecimal(boolean isDecimal) {
-        if (!isTamanho()){
+        if (isDecimal && !isTamanho()){
             throw new RuntimeException("Parâmetro de tipo de coluna que aceita decimal sem obrigar informar o tamanho: tipo \"" + id + "\"");
         }
         this.isDecimal = isDecimal;

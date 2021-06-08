@@ -125,7 +125,7 @@ create index mer_modulo_nome  on mer_driver(nome);
 -- TIPO DE DADO - Estática
 -- ------------------------------------------------------------------------
 create table mer_coluna_tipo (
-      id            car(1)      not null
+      id            varchar(1)  not null
     , descr         varchar(20) not null
     , istamanho     boolean
     , isdecimal     boolean
