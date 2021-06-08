@@ -122,6 +122,27 @@ create index mer_modulo_id    on mer_driver(id);
 create index mer_modulo_nome  on mer_driver(nome);
 
 -- ------------------------------------------------------------------------
+-- TIPO DE DADO - Estática
+-- ------------------------------------------------------------------------
+create table mer_coluna_tipo (
+      id            car(1)      not null
+    , descr         varchar(20) not null
+    , istamanho     boolean
+    , isdecimal     boolean
+    , constraint mer_coluna_tipo_pk primary key (id)
+    , constraint mer_coluna_tipo_descr_uk unique (id)
+--  Padrão auditoria
+    , _inc_usua     bigint
+    , _inc_data     datetime
+    , _alt_usua     bigint
+    , _alt_data     datetime
+    , constraint mer_coluna_tipo_inc_usua_fk foreign key (_inc_usua)
+                 references sec_usuario (id)
+    , constraint mer_coluna_tipo_alt_usua_fk foreign key (_alt_usua)
+                 references sec_usuario (id)
+);
+
+-- ------------------------------------------------------------------------
 -- MESES
 -- ------------------------------------------------------------------------
 create table est_mes (
