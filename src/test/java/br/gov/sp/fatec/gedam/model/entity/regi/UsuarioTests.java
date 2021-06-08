@@ -20,6 +20,7 @@ import br.gov.sp.fatec.gedam.service.regi.UsuarioRepository;
 
 @SpringBootTest
 @Transactional
+@Rollback
 public class UsuarioTests {
 
     @Autowired
@@ -47,7 +48,6 @@ public class UsuarioTests {
     }
 
     @Test
-    @Rollback
     void alterar(){
 
         Usuario usuario = usuRepo.findByNome(NOME_1).get();
@@ -59,7 +59,6 @@ public class UsuarioTests {
     }
 
     @Test
-    @Rollback
     void excluir(){
 
         assertTrue(usuRepo.existsByNome(NOME_1));

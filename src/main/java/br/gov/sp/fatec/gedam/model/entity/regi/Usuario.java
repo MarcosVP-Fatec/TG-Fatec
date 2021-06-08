@@ -14,11 +14,6 @@ import javax.persistence.Table;
 import br.gov.sp.fatec.gedam.model.entity.comm.GeneratorId;
 import br.gov.sp.fatec.gedam.tool.Validador;
 
-/**
- * @author Marcos Vinicio Pereira
- * @category Entidades
- * @version 1.0
- */
 @Entity
 @Table(name = "sec_usuario")
 @AttributeOverride(name = "id", column = @Column(name = "id"))
