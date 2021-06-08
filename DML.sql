@@ -4,44 +4,52 @@
 -- USUÁRIO
 -- ------------------------------------------------------------------------
 insert into sec_usuario (nome, email, validhash) values ('MVP','marcos.pereira47@fatec.sp.gov.br','?');
+update sec_usuario set _inc_usua = 1, _alt_usua = 1, _inc_data = '2021-04-01', _alt_data = '2021-04-01' where _inc_usua is null;
 commit;
-update sec_usuario set _inc_usua = 1 
-                     , _alt_usua = 1
-                     , _inc_data = '2021-04-01'
-                     , _alt_data = '2021-04-01'
-        where nome = 'MVP';
 
 -- ------------------------------------------------------------------------
 -- AUTORIZAÇÕES BÁSICAS
 -- ------------------------------------------------------------------------
-insert into sec_autorizacao (chave, descr, _inc_usua, _inc_data, _alt_usua, _alt_data) values ('ROLE_OWNER'    ,'Proprietário do sistema' ,1,'2021-04-01',1,'2021-04-01');
-insert into sec_autorizacao (chave, descr, _inc_usua, _inc_data, _alt_usua, _alt_data) values ('ROLE_ADMIN'    ,'Administrador do sistema',1,'2021-04-01',1,'2021-04-01');
-insert into sec_autorizacao (chave, descr, _inc_usua, _inc_data, _alt_usua, _alt_data) values ('ROLE_MODELADOR','Modelador de tabelas'    ,1,'2021-04-01',1,'2021-04-01');
-insert into sec_autorizacao (chave, descr, _inc_usua, _inc_data, _alt_usua, _alt_data) values ('ROLE_CONSULTAR','Consultar sem alterações',1,'2021-04-01',1,'2021-04-01');
+insert into sec_autorizacao (chave, descr) values ('ROLE_OWNER'    ,'Proprietário do sistema' );
+insert into sec_autorizacao (chave, descr) values ('ROLE_ADMIN'    ,'Administrador do sistema');
+insert into sec_autorizacao (chave, descr) values ('ROLE_MODELADOR','Modelador de tabelas'    );
+insert into sec_autorizacao (chave, descr) values ('ROLE_CONSULTAR','Consultar sem alterações');
+update sec_autorizacao set _inc_usua = 1, _alt_usua = 1, _inc_data = '2021-04-01', _alt_data = '2021-04-01' where _inc_usua is null;
+commit;
 
 -- ------------------------------------------------------------------------
 -- AUTORIZAÇÕES DO USUÁRIO OWNER
 -- ------------------------------------------------------------------------
-insert into sec_aut_usuario (idaut, idusu, _inc_usua, _inc_data, _alt_usua, _alt_data) 
-       values (1,1,1,'2021-04-01',1,'2021-04-01');
-insert into sec_aut_usuario (idaut, idusu, _inc_usua, _inc_data, _alt_usua, _alt_data) 
-       values (2,1,1,'2021-04-01',1,'2021-04-01');
+insert into sec_aut_usuario (idaut, idusu) values (1,1);
+insert into sec_aut_usuario (idaut, idusu) values (2,1);
+update sec_aut_usuario set _inc_usua = 1, _alt_usua = 1, _inc_data = '2021-04-01', _alt_data = '2021-04-01' where _inc_usua is null;
+commit;
+
+-- ------------------------------------------------------------------------
+-- DRIVERS - Estática
+-- ------------------------------------------------------------------------
+insert into mer_driver (nome, versao, anomesvs) values ('Oracle'    , '' , 999999);
+insert into mer_driver (nome, versao, anomesvs) values ('SQL Server', '' , 999999);
+insert into mer_driver (nome, versao, anomesvs) values ('MySql'     , '' , 999999);
+update mer_driver set _inc_usua = 1, _alt_usua = 1, _inc_data = '2021-04-01', _alt_data = '2021-04-01' where _inc_usua is null;       
+commit;
 
 -- ------------------------------------------------------------------------
 -- MESES
 -- ------------------------------------------------------------------------
-insert into est_mes (id, descr, _inc_usua, _inc_data, _alt_usua, _alt_data) values ('01','Janeiro'  ,1,'2021-04-01',1,'2021-04-01');
-insert into est_mes (id, descr, _inc_usua, _inc_data, _alt_usua, _alt_data) values ('02','Fevereiro',1,'2021-04-01',1,'2021-04-01');
-insert into est_mes (id, descr, _inc_usua, _inc_data, _alt_usua, _alt_data) values ('03','Março'    ,1,'2021-04-01',1,'2021-04-01');
-insert into est_mes (id, descr, _inc_usua, _inc_data, _alt_usua, _alt_data) values ('04','Abril'    ,1,'2021-04-01',1,'2021-04-01');
-insert into est_mes (id, descr, _inc_usua, _inc_data, _alt_usua, _alt_data) values ('05','Maio'     ,1,'2021-04-01',1,'2021-04-01');
-insert into est_mes (id, descr, _inc_usua, _inc_data, _alt_usua, _alt_data) values ('06','Junho'    ,1,'2021-04-01',1,'2021-04-01');
-insert into est_mes (id, descr, _inc_usua, _inc_data, _alt_usua, _alt_data) values ('07','Julho'    ,1,'2021-04-01',1,'2021-04-01');
-insert into est_mes (id, descr, _inc_usua, _inc_data, _alt_usua, _alt_data) values ('08','Agosto'   ,1,'2021-04-01',1,'2021-04-01');
-insert into est_mes (id, descr, _inc_usua, _inc_data, _alt_usua, _alt_data) values ('09','Setembro' ,1,'2021-04-01',1,'2021-04-01');
-insert into est_mes (id, descr, _inc_usua, _inc_data, _alt_usua, _alt_data) values ('10','Outubro'  ,1,'2021-04-01',1,'2021-04-01');
-insert into est_mes (id, descr, _inc_usua, _inc_data, _alt_usua, _alt_data) values ('11','Novembro' ,1,'2021-04-01',1,'2021-04-01');
-insert into est_mes (id, descr, _inc_usua, _inc_data, _alt_usua, _alt_data) values ('12','Dezembro' ,1,'2021-04-01',1,'2021-04-01');
+insert into est_mes (id, descr) values ('01','Janeiro'  );
+insert into est_mes (id, descr) values ('02','Fevereiro');
+insert into est_mes (id, descr) values ('03','Março'    );
+insert into est_mes (id, descr) values ('04','Abril'    );
+insert into est_mes (id, descr) values ('05','Maio'     );
+insert into est_mes (id, descr) values ('06','Junho'    );
+insert into est_mes (id, descr) values ('07','Julho'    );
+insert into est_mes (id, descr) values ('08','Agosto'   );
+insert into est_mes (id, descr) values ('09','Setembro' );
+insert into est_mes (id, descr) values ('10','Outubro'  );
+insert into est_mes (id, descr) values ('11','Novembro' );
+insert into est_mes (id, descr) values ('12','Dezembro' );
+update est_mes set _inc_usua = 1, _alt_usua = 1, _inc_data = '2021-04-01', _alt_data = '2021-04-01' where _inc_usua is null;       
 commit;
 
 /*
