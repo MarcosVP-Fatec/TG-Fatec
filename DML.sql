@@ -44,9 +44,9 @@ commit;
 -- ------------------------------------------------------------------------
 -- COLUNAS - Tipo - Estática
 -- ------------------------------------------------------------------------
-insert into mer_coluna_tipo (id, descr, istamanho, isdecimal) values ('N','Número'             ,1,0);
-insert into mer_coluna_tipo (id, descr, istamanho, isdecimal) values ('C','Caracteres (String)',1,0);
-insert into mer_coluna_tipo (id, descr, istamanho, isdecimal) values ('D','Data'               ,0,0);
+insert into mer_coluna_tipo (idtipocol, descr, istamanho, isdecimal) values ('N','Número'             ,1,0);
+insert into mer_coluna_tipo (idtipocol, descr, istamanho, isdecimal) values ('C','Caracteres (String)',1,0);
+insert into mer_coluna_tipo (idtipocol, descr, istamanho, isdecimal) values ('D','Data'               ,0,0);
 update mer_coluna_tipo set _inc_usua = 1, _alt_usua = 1, _inc_data = '2021-04-01', _alt_data = '2021-04-01' where _inc_usua is null;       
 commit;
 

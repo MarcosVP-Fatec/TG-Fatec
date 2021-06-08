@@ -17,7 +17,7 @@ import br.gov.sp.fatec.gedam.model.entity.comm.GeneratorAudit;
 public class ColunaTipo extends GeneratorAudit{
 
     @Id
-    @Column(name = "id"       , length = 1,  unique = true , nullable = false, updatable = false )
+    @Column(name = "idtipocol", length = 1,  unique = true , nullable = false, updatable = false )
     private String id;
 
     @Column(name = "descr"    , length = 20, unique = true, nullable = false, updatable = true )

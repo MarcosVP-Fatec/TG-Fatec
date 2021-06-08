@@ -33,7 +33,7 @@ public class ColunaTipoTests {
     void iniciar(@Autowired JdbcTemplate jdbc){
 
         jdbc.update(
-            "insert into mer_coluna_tipo (id, descr, istamanho, isdecimal) values (?,?,?,?)"
+            "insert into mer_coluna_tipo (idtipocol, descr, istamanho, isdecimal) values (?,?,?,?)"
             , String.valueOf(ID_1)
             , DESCR_1
             , 1
