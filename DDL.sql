@@ -99,6 +99,27 @@ create index mer_driver_id    on mer_driver(id);
 create index mer_driver_nome  on mer_driver(nome);
 
 -- ------------------------------------------------------------------------
+-- MÓDULOS - CADASTRO USUÁRIO
+-- ------------------------------------------------------------------------
+create table mer_modulo (
+      id            bigint auto_increment
+    , nome          varchar(30)  not null
+    , constraint mer_modulo_pk primary key (id)
+    , constraint mer_modulo_nome_uk unique (nome)
+--  Padrão auditoria     
+    , _inc_usua     bigint
+    , _inc_data     datetime            
+    , _alt_usua     bigint          
+    , _alt_data     datetime            
+    , constraint mer_modulo_inc_usua_fk foreign key (_inc_usua)
+                 references sec_usuario (id)
+    , constraint mer_modulo_alt_usua_fk foreign key (_alt_usua)
+                 references sec_usuario (id)
+);
+create index mer_modulo_id    on mer_driver(id);
+create index mer_modulo_nome  on mer_driver(nome);
+
+-- ------------------------------------------------------------------------
 -- MESES
 -- ------------------------------------------------------------------------
 create table est_mes (

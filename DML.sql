@@ -35,6 +35,13 @@ update mer_driver set _inc_usua = 1, _alt_usua = 1, _inc_data = '2021-04-01', _a
 commit;
 
 -- ------------------------------------------------------------------------
+-- MÓDULOS - Estática
+-- ------------------------------------------------------------------------
+insert into mer_modulo (nome) values ('MER');
+update mer_modulo set _inc_usua = 1, _alt_usua = 1, _inc_data = '2021-04-01', _alt_data = '2021-04-01' where _inc_usua is null;       
+commit;
+
+-- ------------------------------------------------------------------------
 -- MESES
 -- ------------------------------------------------------------------------
 insert into est_mes (id, descr) values ('01','Janeiro'  );
