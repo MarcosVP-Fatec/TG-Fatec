@@ -19,9 +19,9 @@ public class DominioCampo extends GeneratorAudit{
     @Column(name="decimais"    ,length = 1  , unique = false, nullable = false)  private int    decimais;
     
     public String getId()                               {return id;                         }
-    public void setId(String id)                        {this.id = id;                      }
+    public void setId(String id)                        {this.id = id.toUpperCase();        }
     public String getPadrao()                           {return padrao;                     }
-    public void setPadrao(String padrao)                {this.padrao = padrao;              }
+    public void setPadrao(String padrao)                {this.padrao = padrao.toUpperCase();}
     public String getIdTipoColuna()                     {return idTipoColuna;               }
     public void setIdTipoColuna(String idTipoColuna)    {this.idTipoColuna = idTipoColuna;  }
     public int getTamanho()                             {return tamanho;                    }
